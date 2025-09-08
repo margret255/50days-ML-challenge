@@ -24,3 +24,19 @@ print(img)
 
 #displating the image from numpy arrayimg
 img_array=plt.imshow(img)
+
+#resizing the image using pillow library
+from PIL import Image
+
+img=Image.open('/content/girl.jpeg')
+img_resize=img.resize((200,200 ))
+
+img_resize.save('girl_image_resized.jpg')
+
+img_res=mpimg.imread('/content/girl_image_resized.jpg')
+img_res_array=plt.imshow(img_res)
+plt.show()  
+
+#importing opencv library
+import cv2
+img=cv2.imread('/content/girl_image_resized.jpg')
